@@ -3,68 +3,57 @@ var SLOT_POOL_ID = "_SLOT_POOL";
 var SLOT_POOL = new Dict(SLOT_POOL_ID);
 SLOT_POOL.quiet = true;
 
-function add() {
+function add(channel) {
+  if (channel === undefined) {
+    error("No channel specified\n");
+    return;
+  }
+
   var id = SLOT_COUNT.toString();
+  var ch = channel.toString();
 
-  SLOT_POOL.append(id, {
-    location: "",
-    next: "",
-    previous: "",
-  });
+  SLOT_POOL.append(ch, id);
 
-  outlet(0, "add", id);
-
-  max.openfile(id, "slot.maxpat");
+  outlet(0, "load", "slot.maxpat", ch, id);
 
   SLOT_COUNT++;
 }
 
 function remove() {
-  for (var i = 0; i < arguments.length; i++) {
-    var id = arguments[i];
-
-    if (SLOT_POOL.contains(id)) {
-      _removeReferences(id);
-
-      max.closefile(id);
-
-      SLOT_POOL.remove(id);
-
-      outlet(0, "remove", id);
-    }
-  }
-}
-
-function _removeReferences(id) {
-  var slot = SLOT_POOL.get(id);
-
-  if (slot === undefined) {
+  if (arguments.length < 1) {
+    error("Must provide the channel and optional slot IDs");
     return;
   }
 
-  var keys = SLOT_POOL.getkeys();
+  var channel = arguments[0];
 
-  if (keys === null) {
+  if (!SLOT_POOL.contains(channel)) {
     return;
   }
 
-  for (var i = 0; i < keys.length; i++) {
-    var currentSlot = SLOT_POOL.get(id);
+  var slots = SLOT_POOL.get(channel);
 
-    if (currentSlot === undefined) {
-      continue;
-    }
+  if (slots === null) {
+    return;
+  }
 
-    if (slot["next"] === id) {
-      currentSlot["next"] = "";
-    } else {
-      currentSlot["next"] = slot["next"];
-    }
+  var args = [];
 
-    if (currentSlot["previous"] === id) {
-      currentSlot["previous"] = "";
-    } else {
-      currentSlot["previous"] = slot["previous"];
+  for (var i = 1; i < arguments.length; i++) {
+    args.push(arguments[i]);
+  }
+
+  var newSlots = [];
+
+  for (var i = 0; i < slots.length; i++) {
+    for (var j = 0; j < args.length; j++) {
+      if (slots[i] == args[j]) {
+        outlet(0, "remove", slots[i]);
+      } else {
+        newSlots.push(slots[i]);
+      }
     }
   }
+
+  SLOT_POOL.set(channel, newSlots);
 }

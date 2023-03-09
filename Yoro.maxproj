@@ -2,7 +2,7 @@
 	"name" : "Yoro",
 	"version" : 1,
 	"creationdate" : 3760624886,
-	"modificationdate" : 3761162098,
+	"modificationdate" : 3761237560,
 	"viewrect" : [ 25.0, 107.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
@@ -64,6 +64,11 @@
 		}
 ,
 		"code" : 		{
+			"init_slot.js" : 			{
+				"kind" : "javascript",
+				"local" : 1
+			}
+,
 			"slotpool.js" : 			{
 				"kind" : "javascript",
 				"local" : 1

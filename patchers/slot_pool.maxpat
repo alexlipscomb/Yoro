@@ -10,9 +10,9 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 179.0, 160.0, 696.0, 608.0 ],
+		"rect" : [ 80.0, 150.0, 830.0, 594.0 ],
 		"bglocked" : 0,
-		"openinpresentation" : 0,
+		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
 		"default_fontface" : 0,
 		"default_fontname" : "Arial",
@@ -40,42 +40,182 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-16",
+					"id" : "obj-42",
+					"maxclass" : "button",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 155.963289737701416, 419.266020059585571, 24.0, 24.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-40",
+					"maxclass" : "textbutton",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 459.560744404792786, 556.692942917346954, 100.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 14.907986402511597, 190.958100318908691, 154.584807753562927, 20.0 ],
+					"text" : "Remove"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-31",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 495.560744404792786, 853.543352365493774, 135.0, 22.0 ],
+					"text" : "udpsend localhost 8899"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-30",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 495.560744404792786, 825.19689416885376, 157.0, 22.0 ],
+					"text" : "prepend slot_pool done add"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-29",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 459.560744404792786, 795.275632739067078, 55.0, 22.0 ],
+					"text" : "zl.slice 2"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-28",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 459.560744404792786, 736.220511496067047, 65.061915218830109, 22.0 ],
+					"text" : "t l l"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-24",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 615.663105607032776, 736.220511496067047, 81.0, 22.0 ],
+					"text" : "prepend slots"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-22",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 615.663105607032776, 768.464566051959991, 135.0, 22.0 ],
+					"text" : "udpsend localhost 8899"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-20",
 					"maxclass" : "newobj",
 					"numinlets" : 3,
 					"numoutlets" : 3,
-					"outlettype" : [ "bang", "bang", "" ],
-					"patching_rect" : [ 462.597922086715698, 533.0, 44.0, 22.0 ],
-					"text" : "sel 0 1"
+					"outlettype" : [ "", "", "" ],
+					"patching_rect" : [ 459.560744404792786, 704.724446833133698, 331.20472240447998, 22.0 ],
+					"text" : "routepass load remove"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"button" : 1,
-					"id" : "obj-15",
-					"maxclass" : "tab",
+					"id" : "obj-17",
+					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "int", "", "" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 462.597922086715698, 497.0, 200.0, 24.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 14.907986402511597, 190.958100318908691, 155.0, 24.0 ],
-					"tabs" : [ "Add", "Delete" ]
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 505.622659623622894, 768.464566051959991, 51.0, 22.0 ],
+					"text" : "pcontrol"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-19",
-					"linecount" : 2,
+					"id" : "obj-36",
+					"linecount" : 8,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 954.419040441513062, 533.0, 152.0, 117.0 ],
+					"text" : "Endpoint\n/channel/<n>/add_slot [n]\n\nif [n] is provided, insert the channel at that position\n\nelse, put the channel at the end"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-27",
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 431.597922086715698, 641.613618401031545, 50.0, 36.0 ],
-					"text" : "remove \"7\""
+					"patching_rect" : [ 97.058821678161621, 712.499986410140991, 35.0, 22.0 ],
+					"text" : "clear"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-11",
+					"maxclass" : "newobj",
+					"numinlets" : 3,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "" ],
+					"patching_rect" : [ 789.855079054832458, 676.811599850654602, 128.0, 22.0 ],
+					"text" : "routepass add remove"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-10",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 789.855079054832458, 626.811367452144623, 87.0, 22.0 ],
+					"text" : "route slot_pool"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-1",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 789.855079054832458, 599.999773025512695, 97.0, 22.0 ],
+					"text" : "udpreceive 8899"
 				}
 
 			}
@@ -86,7 +226,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 462.597922086715698, 599.85537460182195, 74.0, 22.0 ],
+					"patching_rect" : [ 459.560744404792786, 662.060102311115315, 74.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"filename" : "slotpool.js",
 						"parameter_enable" : 0
@@ -134,18 +274,6 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-109",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "add" ],
-					"patching_rect" : [ 462.597922086715698, 562.877317786216736, 35.0, 22.0 ],
-					"text" : "t add"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-71",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -181,7 +309,7 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-2",
-					"items" : "<empty>",
+					"items" : 1,
 					"maxclass" : "chooser",
 					"multiselect" : 1,
 					"numinlets" : 1,
@@ -191,30 +319,6 @@
 					"patching_rect" : [ 220.907986402511597, 525.456151723861694, 154.584807753562927, 174.501948595046997 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 14.907986402511597, 14.456151723861694, 154.584807753562927, 174.501948595046997 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-9",
-					"linecount" : 5,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 538.0, 300.0, 470.0, 75.0 ],
-					"text" : "Loading a new slot:\n\n- The new slot has its address calculated and it will be added to the list, initially without being stored in any channel\n- "
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-7",
-					"linecount" : 12,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 538.0, 93.0, 477.0, 172.0 ],
-					"text" : "Counting slots:\n- Reference Counter?\n        - A continually incremented counter that keeps track of IDs\n        - When deleting a slot, the counter is not decremented. This should surely decrase the risk of collisions.\n        - Assigning slots to channels is easy: A slot will have 3 mandatory data fields:\n            - `location` - The location of the slot. This will be a channel ID\n            - `next` - The address of the next slot. If `null`, this will be the channel's output\n                - How to handle multiple `null` cases in a channel? Shouldn't be possible. The only `null` case should be at the very end of a slot list.\n            - `previous` - The address of the previous slot. If `null`, this slot is at the top of the list."
 				}
 
 			}
@@ -237,7 +341,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 615.935686945613838, 599.999773025512695, 96.0, 22.0 ],
+					"patching_rect" : [ 459.560744404792786, 625.984026372432709, 96.0, 22.0 ],
 					"text" : "prepend remove"
 				}
 
@@ -249,7 +353,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 615.935686945613838, 562.877317786216736, 38.0, 22.0 ],
+					"patching_rect" : [ 459.560744404792786, 588.861571133136749, 38.0, 22.0 ],
 					"text" : "zl.reg"
 				}
 
@@ -257,8 +361,29 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
+					"destination" : [ "obj-10", 0 ],
+					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-11", 0 ],
+					"source" : [ "obj-10", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-13", 0 ],
-					"source" : [ "obj-109", 0 ]
+					"source" : [ "obj-11", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-13", 0 ],
+					"source" : [ "obj-11", 0 ]
 				}
 
 			}
@@ -278,7 +403,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-19", 1 ],
+					"destination" : [ "obj-20", 0 ],
 					"order" : 0,
 					"source" : [ "obj-13", 0 ]
 				}
@@ -301,29 +426,57 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-16", 0 ],
-					"source" : [ "obj-15", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-109", 0 ],
-					"source" : [ "obj-16", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-122", 0 ],
-					"source" : [ "obj-16", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-131", 0 ],
 					"source" : [ "obj-2", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-24", 0 ],
+					"source" : [ "obj-20", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-28", 0 ],
+					"source" : [ "obj-20", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-22", 0 ],
+					"source" : [ "obj-24", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-65", 0 ],
+					"source" : [ "obj-27", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-17", 0 ],
+					"source" : [ "obj-28", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-29", 0 ],
+					"source" : [ "obj-28", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-30", 0 ],
+					"source" : [ "obj-29", 1 ]
 				}
 
 			}
@@ -336,9 +489,30 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-31", 0 ],
+					"source" : [ "obj-30", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-2", 0 ],
 					"midpoints" : [ 223.407986402511597, 855.0, 87.907986402511597, 855.0, 87.907986402511597, 514.456151723861694, 230.407986402511597, 514.456151723861694 ],
 					"source" : [ "obj-4", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-122", 0 ],
+					"source" : [ "obj-40", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-71", 0 ],
+					"source" : [ "obj-42", 0 ]
 				}
 
 			}

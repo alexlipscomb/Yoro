@@ -50,7 +50,7 @@
 						"attr_comment" : "Signal In"
 					}
 ,
-					"text" : "mc.in~ 1 @attr_comment \"Signal In\" @chans 8"
+					"text" : "mc.in~ 1 @attr_comment \"Signal In\" @chans 2"
 				}
 
 			}
@@ -65,7 +65,7 @@
 						"attr_comment" : "Signal Out"
 					}
 ,
-					"text" : "mc.out~ 1 @attr_comment \"Signal Out\" @chans 8"
+					"text" : "mc.out~ 1 @attr_comment \"Signal Out\" @chans 2"
 				}
 
 			}
@@ -75,7 +75,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 393.403376062711004, 79.567015409469604, 226.0, 22.0 ],
+					"patching_rect" : [ 586.403376062711004, 83.567015409469604, 226.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"attr_comment" : "Control Data Out"
 					}
@@ -91,7 +91,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 393.403376062711004, 28.567015409469604, 209.0, 22.0 ],
+					"patching_rect" : [ 586.403376062711004, 32.567015409469604, 209.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"attr_comment" : "Control Data In"
 					}
